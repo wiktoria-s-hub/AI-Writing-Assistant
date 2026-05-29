@@ -1,3 +1,20 @@
+"""
+AI WRITING ASSISTANT - TRANSCRIPTION ENGINE
+-------------------------------------------
+Author: Wiktoria Spytek
+Description: 
+A high-efficiency transcription tool designed for writers. 
+Utilizes the 'faster-whisper' model (Medium) to convert local audio 
+recordings into text drafts. 
+
+Key Features:
+- Local execution optimized for consumer hardware (Intel Macs).
+- Dynamic file selection menu.
+- VAD (Voice Activity Detection) for silence removal.
+- Standardized text output for creative writing workflows.
+"""
+
+
 import os
 import sys
 import asyncio

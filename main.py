@@ -71,7 +71,7 @@ async def main_menu():
     # Using relative path for portability[cite: 7]
     project_root = "./"
     
-    # Foldery podrzędne (sprawdź czy nazwy są identyczne jak na dysku!)
+    # Subdirectories (ensure these match your local folder structure!)
     audio_folder = os.path.join(project_root, "recordings")
     text_folder = os.path.join(project_root, "transcripts")
 
@@ -86,7 +86,7 @@ async def main_menu():
         print(f"❌ 'Recordings' folder is empty.")
         return
 
-    print("\n--- WHICH RECORDING DO YOU WANT TO TRANSCRIBE? ---"")
+    print("\n--- WHICH RECORDING DO YOU WANT TO TRANSCRIBE? ---")
     for i, file in enumerate(files, 1):
         print(f"{i}. {file}")
     
@@ -94,7 +94,7 @@ async def main_menu():
         wybor = int(input("\nSelect recording number: ")) - 1
         audio_file = os.path.join(audio_folder, files[wybor])
     except (ValueError, IndexError):
-        print(❌ Invalid selection.")
+        print("❌ Invalid selection.")
         return
 
     # 2. SEARCH FOR TEXT FILES
